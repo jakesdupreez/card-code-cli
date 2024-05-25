@@ -34,13 +34,13 @@ async function notifyabpinnies(authorization) {
         const apiKey = process.env.apiKey;
 
         // Create a JSON object to be sent as a parameter
-        const jsonObject = {
-            transactionId: authorization,
-            //amount: 100000,
-        };
+        // const jsonObject = {
+        //     transactionId: authorization,
+        //     //amount: 100000,
+        // };
 
         // Convert the JSON object to a string
-        const jsonString = JSON.stringify(jsonObject);
+        const jsonString = JSON.stringify(authorization);
 
         // Define the request options
         const requestOptions = {
@@ -64,7 +64,7 @@ async function notifyabpinnies(authorization) {
                 console.log('Response from Transaction rewards system:', data);
             })
             .catch((error) => {
-                console.error('Error:', error);
+                console.log('Error:', error);
             });
 }
 
