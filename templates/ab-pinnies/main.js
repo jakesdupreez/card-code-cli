@@ -28,10 +28,10 @@ const afterDecline = async (transaction) => {
 
 //custom AB-pinnies call
 async function notifyabpinnies(authorization) { 
-        const apiUrl = env.abpinniesURL;
+        const apiUrl = process.env.abpinniesURL;
 
         // API key to identify user in transaction rewards system
-        const apiKey = env.apiKey;
+        const apiKey = process.env.apiKey;
 
         // Create a JSON object to be sent as a parameter
         const jsonObject = {
